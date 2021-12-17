@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-family: $font-montserrat;
+    transition: .3s;
+    z-index: 5;
+
+    &__logo {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: $font-color-banner;
+    }
+    &__container {
+        padding-top: 33px;
+        padding-bottom: 33px;
+    }
+
+    &.sticky {
+        background: $red;
+        box-shadow: 0 2px 8px 1px rgba(0,0,0,.2);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navigation {
+        a {
+            margin: 0 16px 0;
+            line-height: 1.714;
+            color: $font-color-banner;
+        
+            &:last-child {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+  
