@@ -1,7 +1,7 @@
 window.$ = window.jQuery = require('jquery');
-import Swiper, { Autoplay, Navigation } from 'swiper';
+import Swiper, { Autoplay, Navigation, Pagintaion } from 'swiper';
 
-Swiper.use([ Autoplay, Navigation ]);
+Swiper.use([ Autoplay, Navigation, Pagintaion ]);
 
 $(document).ready(function (){
 
@@ -29,6 +29,21 @@ $(document).ready(function (){
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+    });
+
+    const clients_swiper = new Swiper('.clients__swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoHeight: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
         },
     });
 
